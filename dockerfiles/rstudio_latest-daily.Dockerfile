@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.licenses="GPL-2.0-or-later" \
 
 ENV S6_VERSION=v2.1.0.2
 ENV RSTUDIO_VERSION=daily
-ENV DEFAULT_USER=rstudio
+ENV DEFAULT_USER=root
 ENV PANDOC_VERSION=default
 ENV QUARTO_VERSION=default
 

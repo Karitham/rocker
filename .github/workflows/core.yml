@@ -5,7 +5,7 @@ on:
     branches:
       - "master"
     paths:
-      - "dockerfiles/*_devel.Dockerfile"
+      - "dockerfiles/rstudio_*.Dockerfile"
   workflow_run:
     workflows:
       - "Create new release"
@@ -49,11 +49,6 @@ jobs:
       matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
     steps:
       - uses: actions/checkout@v3
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
