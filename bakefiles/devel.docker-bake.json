@@ -23,13 +23,13 @@
         "org.opencontainers.image.base.name": "docker.io/library/ubuntu:latest"
       },
       "tags": [
-        "docker.io/rocker/r-ver:devel"
+        "ghcr.io/karitham/r-ver:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/r-ver:devel"
+        "ghcr.io/karitham/r-ver:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -41,16 +41,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/rstudio",
         "org.opencontainers.image.description": "RStudio Server with fixed version of R",
-        "org.opencontainers.image.base.name": "docker.io/rocker/r-ver:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/r-ver:devel"
       },
       "tags": [
-        "docker.io/rocker/rstudio:devel"
+        "ghcr.io/karitham/rstudio:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/rstudio:devel"
+        "ghcr.io/karitham/rstudio:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -62,16 +62,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/tidyverse",
         "org.opencontainers.image.description": "Version-stable build of R, RStudio Server, and R packages.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/rstudio:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/rstudio:devel"
       },
       "tags": [
-        "docker.io/rocker/tidyverse:devel"
+        "ghcr.io/karitham/tidyverse:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/tidyverse:devel"
+        "ghcr.io/karitham/tidyverse:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -83,16 +83,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/verse",
         "org.opencontainers.image.description": "Adds tex & related publishing packages to version-locked tidyverse image.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/tidyverse:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/tidyverse:devel"
       },
       "tags": [
-        "docker.io/rocker/verse:devel"
+        "ghcr.io/karitham/verse:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/verse:devel"
+        "ghcr.io/karitham/verse:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -104,16 +104,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/geospatial",
         "org.opencontainers.image.description": "Docker-based Geospatial toolkit for R, built on versioned Rocker image.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/verse:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/verse:devel"
       },
       "tags": [
-        "docker.io/rocker/geospatial:devel"
+        "ghcr.io/karitham/geospatial:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/geospatial:devel"
+        "ghcr.io/karitham/geospatial:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -125,16 +125,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/shiny",
         "org.opencontainers.image.description": "Shiny Server on versioned Rocker image.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/r-ver:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/r-ver:devel"
       },
       "tags": [
-        "docker.io/rocker/shiny:devel"
+        "ghcr.io/karitham/shiny:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/shiny:devel"
+        "ghcr.io/karitham/shiny:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -146,16 +146,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/shiny-verse",
         "org.opencontainers.image.description": "Rocker Shiny image + Tidyverse R packages. Uses version-stable image.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/shiny:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/shiny:devel"
       },
       "tags": [
-        "docker.io/rocker/shiny-verse:devel"
+        "ghcr.io/karitham/shiny-verse:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/shiny-verse:devel"
+        "ghcr.io/karitham/shiny-verse:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -167,16 +167,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/binder",
         "org.opencontainers.image.description": "Adds Jupyter to rocker/geospatial. RStudio Server can be started from Jupyter.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/geospatial:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/geospatial:devel"
       },
       "tags": [
-        "docker.io/rocker/binder:devel"
+        "ghcr.io/karitham/binder:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/binder:devel"
+        "ghcr.io/karitham/binder:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -191,13 +191,13 @@
         "org.opencontainers.image.base.name": "docker.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04"
       },
       "tags": [
-        "docker.io/rocker/cuda:devel"
+        "ghcr.io/karitham/cuda:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/cuda:devel"
+        "ghcr.io/karitham/cuda:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -209,16 +209,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/ml",
         "org.opencontainers.image.description": "Docker image with R + GPU support for machine learning libraries.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/cuda:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/cuda:devel"
       },
       "tags": [
-        "docker.io/rocker/ml:devel"
+        "ghcr.io/karitham/ml:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/ml:devel"
+        "ghcr.io/karitham/ml:devel"
       ],
       "cache-to": [
         "type=inline"
@@ -230,16 +230,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/ml-verse",
         "org.opencontainers.image.description": "Docker image with R + GPU support for machine learning libraries, and many R packages.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/ml:devel"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/ml:devel"
       },
       "tags": [
-        "docker.io/rocker/ml-verse:devel"
+        "ghcr.io/karitham/ml-verse:devel"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/ml-verse:devel"
+        "ghcr.io/karitham/ml-verse:devel"
       ],
       "cache-to": [
         "type=inline"

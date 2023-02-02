@@ -6,12 +6,28 @@
     {
       "default": [
         {
-          "targets": ["r-ver", "rstudio", "tidyverse", "verse", "geospatial", "shiny", "shiny-verse", "binder", "cuda", "ml", "ml-verse"]
+          "targets": [
+            "r-ver",
+            "rstudio",
+            "tidyverse",
+            "verse",
+            "geospatial",
+            "shiny",
+            "shiny-verse",
+            "binder",
+            "cuda",
+            "ml",
+            "ml-verse"
+          ]
         }
       ],
       "cuda11images": [
         {
-          "targets": ["cuda11", "ml-cuda11", "ml-verse-cuda11"]
+          "targets": [
+            "cuda11",
+            "ml-cuda11",
+            "ml-verse-cuda11"
+          ]
         }
       ]
     }
@@ -39,14 +55,14 @@
       "RUN": "/rocker_scripts/setup_R.sh",
       "CMD": "[\"R\"]",
       "tags": [
-        "docker.io/rocker/r-ver:4.1.0"
+        "ghcr.io/karitham/r-ver:4.1.0"
       ],
       "platforms": [
         "linux/amd64",
         "linux/arm64"
       ],
       "cache-from": [
-        "docker.io/rocker/r-ver:4.1.0"
+        "ghcr.io/karitham/r-ver:4.1.0"
       ],
       "cache-to": [
         "type=inline"
@@ -72,7 +88,7 @@
       "CMD": "[\"/init\"]",
       "EXPOSE": 8787,
       "tags": [
-        "docker.io/rocker/rstudio:4.1.0"
+        "ghcr.io/karitham/rstudio:4.1.0"
       ]
     },
     {
@@ -84,7 +100,7 @@
       "FROM": "rocker/rstudio:4.1.0",
       "RUN": "/rocker_scripts/install_tidyverse.sh",
       "tags": [
-        "docker.io/rocker/tidyverse:4.1.0"
+        "ghcr.io/karitham/tidyverse:4.1.0"
       ]
     },
     {
@@ -104,7 +120,7 @@
         "/rocker_scripts/install_quarto.sh"
       ],
       "tags": [
-        "docker.io/rocker/verse:4.1.0"
+        "ghcr.io/karitham/verse:4.1.0"
       ]
     },
     {
@@ -116,7 +132,7 @@
       "FROM": "rocker/verse:4.1.0",
       "RUN": "/rocker_scripts/install_geospatial.sh",
       "tags": [
-        "docker.io/rocker/geospatial:4.1.0"
+        "ghcr.io/karitham/geospatial:4.1.0"
       ]
     },
     {
@@ -135,7 +151,7 @@
       "CMD": "[\"/init\"]",
       "EXPOSE": 3838,
       "tags": [
-        "docker.io/rocker/shiny:4.1.0"
+        "ghcr.io/karitham/shiny:4.1.0"
       ]
     },
     {
@@ -147,7 +163,7 @@
       "FROM": "rocker/shiny:4.1.0",
       "RUN": "/rocker_scripts/install_tidyverse.sh",
       "tags": [
-        "docker.io/rocker/shiny-verse:4.1.0"
+        "ghcr.io/karitham/shiny-verse:4.1.0"
       ]
     },
     {
@@ -168,15 +184,15 @@
       "CMD": "[\"/bin/sh\", \"-c\", \"jupyter notebook --ip 0.0.0.0 --no-browser\"]",
       "EXPOSE": 8888,
       "tags": [
-        "docker.io/rocker/binder:4.1.0"
+        "ghcr.io/karitham/binder:4.1.0"
       ]
     },
     {
       "IMAGE": "cuda",
       "tags": [
-        "docker.io/rocker/cuda:4.1.0-cuda10.1",
-        "docker.io/rocker/cuda:4.1.0",
-        "docker.io/rocker/r-ver:4.1.0-cuda10.1"
+        "ghcr.io/karitham/cuda:4.1.0-cuda10.1",
+        "ghcr.io/karitham/cuda:4.1.0",
+        "ghcr.io/karitham/r-ver:4.1.0-cuda10.1"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/cuda",
@@ -205,8 +221,8 @@
     {
       "IMAGE": "ml",
       "tags": [
-        "docker.io/rocker/ml:4.1.0-cuda10.1",
-        "docker.io/rocker/ml:4.1.0"
+        "ghcr.io/karitham/ml:4.1.0-cuda10.1",
+        "ghcr.io/karitham/ml:4.1.0"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/ml",
@@ -230,8 +246,8 @@
     {
       "IMAGE": "ml-verse",
       "tags": [
-        "docker.io/rocker/ml-verse:4.1.0-cuda10.1",
-        "docker.io/rocker/ml-verse:4.1.0"
+        "ghcr.io/karitham/ml-verse:4.1.0-cuda10.1",
+        "ghcr.io/karitham/ml-verse:4.1.0"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/ml-verse",
@@ -251,8 +267,8 @@
     {
       "IMAGE": "cuda11",
       "tags": [
-        "docker.io/rocker/cuda:4.1.0-cuda11.1",
-        "docker.io/rocker/r-ver:4.1.0-cuda11.1"
+        "ghcr.io/karitham/cuda:4.1.0-cuda11.1",
+        "ghcr.io/karitham/r-ver:4.1.0-cuda11.1"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/cuda (CUDA 11)",
@@ -281,7 +297,7 @@
         "/rocker_scripts/install_python.sh"
       ],
       "cache-from": [
-        "docker.io/rocker/cuda:4.1.0-cuda11.1"
+        "ghcr.io/karitham/cuda:4.1.0-cuda11.1"
       ],
       "cache-to": [
         "type=inline"
@@ -290,7 +306,7 @@
     {
       "IMAGE": "ml-cuda11",
       "tags": [
-        "docker.io/rocker/ml:4.1.0-cuda11.1"
+        "ghcr.io/karitham/ml:4.1.0-cuda11.1"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/ml (CUDA 11)",
@@ -314,7 +330,7 @@
     {
       "IMAGE": "ml-verse-cuda11",
       "tags": [
-        "docker.io/rocker/ml-verse:4.1.0-cuda11.1"
+        "ghcr.io/karitham/ml-verse:4.1.0-cuda11.1"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/ml-verse (CUDA 11)",

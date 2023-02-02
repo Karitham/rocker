@@ -32,9 +32,9 @@
     {
       "IMAGE": "geospatial-ubuntugis",
       "tags": [
-        "docker.io/rocker/geospatial:4.2.2-ubuntugis",
+        "ghcr.io/karitham/geospatial:4.2.2-ubuntugis",
         "ghcr.io/rocker-org/geospatial:4.2.2-ubuntugis",
-        "docker.io/rocker/geospatial:ubuntugis",
+        "ghcr.io/karitham/geospatial:ubuntugis",
         "ghcr.io/rocker-org/geospatial:ubuntugis"
       ],
       "labels": {
@@ -45,12 +45,15 @@
       "COPY": "scripts/experimental/install_geospatial_unstable.sh /rocker_scripts/experimental/install_geospatial_unstable.sh",
       "RUN": "/rocker_scripts/experimental/install_geospatial_unstable.sh",
       "cache-from": [
-        "docker.io/rocker/geospatial:ubuntugis"
+        "ghcr.io/karitham/geospatial:ubuntugis"
       ]
     },
     {
       "IMAGE": "geospatial-dev-osgeo",
-      "tags": ["docker.io/rocker/geospatial:dev-osgeo", "ghcr.io/rocker-org/geospatial:dev-osgeo"],
+      "tags": [
+        "ghcr.io/karitham/geospatial:dev-osgeo",
+        "ghcr.io/rocker-org/geospatial:dev-osgeo"
+      ],
       "labels": {
         "org.opencontainers.image.title": "rocker/geospatial on dev-osgeo",
         "org.opencontainers.image.description": "Docker-based Geospatial toolkit for R, built on versioned Rocker image."
@@ -64,7 +67,7 @@
       "COPY": "scripts/experimental/install_dev_osgeo.sh /rocker_scripts/experimental/install_dev_osgeo.sh",
       "RUN": "/rocker_scripts/experimental/install_dev_osgeo.sh",
       "cache-from": [
-        "docker.io/rocker/geospatial:dev-osgeo"
+        "ghcr.io/karitham/geospatial:dev-osgeo"
       ]
     }
   ]

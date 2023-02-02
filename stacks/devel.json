@@ -140,7 +140,7 @@
     {
       "IMAGE": "cuda",
       "tags": [
-        "docker.io/rocker/cuda:devel"
+        "ghcr.io/karitham/cuda:devel"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/cuda",
@@ -172,7 +172,7 @@
     {
       "IMAGE": "ml",
       "tags": [
-        "docker.io/rocker/ml:devel"
+        "ghcr.io/karitham/ml:devel"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/ml",
@@ -198,7 +198,7 @@
     {
       "IMAGE": "ml-verse",
       "tags": [
-        "docker.io/rocker/ml-verse:devel"
+        "ghcr.io/karitham/ml-verse:devel"
       ],
       "labels": {
         "org.opencontainers.image.title": "rocker/ml-verse",

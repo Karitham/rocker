@@ -19,17 +19,17 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/rstudio",
         "org.opencontainers.image.description": "RStudio Server with fixed version of R",
-        "org.opencontainers.image.base.name": "docker.io/rocker/r-ver:latest"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/r-ver:latest"
       },
       "tags": [
-        "docker.io/rocker/rstudio:latest-daily"
+        "ghcr.io/karitham/rstudio:latest-daily"
       ],
       "platforms": [
         "linux/amd64",
         "linux/arm64"
       ],
       "cache-from": [
-        "docker.io/rocker/rstudio:latest-daily"
+        "ghcr.io/karitham/rstudio:latest-daily"
       ],
       "cache-to": [
         "type=inline"
@@ -41,16 +41,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/tidyverse",
         "org.opencontainers.image.description": "Version-stable build of R, RStudio Server, and R packages.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/rstudio:latest-daily"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/rstudio:latest-daily"
       },
       "tags": [
-        "docker.io/rocker/tidyverse:latest-daily"
+        "ghcr.io/karitham/tidyverse:latest-daily"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/tidyverse:latest-daily"
+        "ghcr.io/karitham/tidyverse:latest-daily"
       ],
       "cache-to": [
         "type=inline"
@@ -62,16 +62,16 @@
       "labels": {
         "org.opencontainers.image.title": "rocker/verse",
         "org.opencontainers.image.description": "Adds tex & related publishing packages to version-locked tidyverse image.",
-        "org.opencontainers.image.base.name": "docker.io/rocker/tidyverse:latest-daily"
+        "org.opencontainers.image.base.name": "ghcr.io/karitham/tidyverse:latest-daily"
       },
       "tags": [
-        "docker.io/rocker/verse:latest-daily"
+        "ghcr.io/karitham/verse:latest-daily"
       ],
       "platforms": [
         "linux/amd64"
       ],
       "cache-from": [
-        "docker.io/rocker/verse:latest-daily"
+        "ghcr.io/karitham/verse:latest-daily"
       ],
       "cache-to": [
         "type=inline"
